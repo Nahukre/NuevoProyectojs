@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -16,13 +15,12 @@
     top: 0;
     left: 0;
     z-index: 1010;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     z-index: 100;
     text-align: center;
   }
+
   .encabezado {
     /* esta clase corresponde al encabezado*/
     background-color: greenyellow;
@@ -31,13 +29,12 @@
     top: 0;
     left: 0;
     z-index: 1010;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     z-index: 100;
     text-align: center;
   }
+
   .encabezado__logo {
     width: 120px;
     height: 120px;
@@ -45,9 +42,9 @@
     margin-left: 25%;
     padding-top: 4px;
     padding-bottom: 5px;
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
+
   .encabezado__nombre {
     color: #548aff;
     font-size: 48px;
@@ -61,6 +58,7 @@
     letter-spacing: 0.1em;
     word-spacing: 0.3em;
   }
+
   .encabezado__subnombre {
     color: #548aff;
     font-size: 27px;
@@ -72,6 +70,7 @@
     letter-spacing: 0.2em;
     word-spacing: 0.25em;
   }
+
   .menu__items--font {
     background-color: #548aff;
     font-weight: bold;
@@ -83,20 +82,19 @@
     border-bottom: solid;
     border-top: solid;
     border-color: black;
-    position: -webkit-sticky;
     position: sticky;
     margin-bottom: 0px;
   }
   .menu__items--font:hover {
     color: #053191;
   }
+
   ul.menu__items--font li {
     position: relative;
     margin-left: 3px;
     margin-bottom: 0px;
     font-size: 20px;
-    -webkit-transform: skew(-20deg, 0deg);
-            transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
     border-right: solid;
     border-left: solid;
     border-color: black;
@@ -115,6 +113,7 @@
     background-color: #74b11a;
     color: #053191;
   }
+
   li {
     position: relative;
     display: inline-block;
@@ -124,6 +123,7 @@
     border-top: solid;
     border-color: black;
   }
+
   .pagina__index {
     /* esta clase corresponde al index */
     background-image: url(../img/inversion.jpg);
@@ -137,6 +137,7 @@
     padding-bottom: 0px;
     text-align: center;
   }
+
   .pagina {
     background-image: url(../img/inversion.jpg);
     background-size: cover;
@@ -149,10 +150,12 @@
     padding-bottom: 10px;
     text-align: center;
   }
+
   table {
     font-family: sans-serif;
     font-weight: bold;
   }
+
   .carousel-inner {
     display: block;
     margin: auto;
@@ -162,17 +165,21 @@
     border-width: 1px;
     border-color: black;
   }
+
   .carousel-indicators {
     margin: auto;
   }
+
   .carousel-control-prev {
     width: 60%;
     color: #548aff;
   }
+
   .carousel-control-next {
     width: 60%;
     color: #548aff;
   }
+
   #carouselExampleCaptions {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
@@ -180,9 +187,11 @@
     border-bottom: solid;
     border-color: black;
   }
+
   #myForm {
     text-align: left;
   }
+
   #formIdDolar {
     position: absolute;
     top: 50%;
@@ -200,6 +209,7 @@
   #formIdDolar li {
     background-color: black;
   }
+
   #formIdBis {
     position: absolute;
     top: 20%;
@@ -220,6 +230,7 @@
   #formIdBis li {
     background-color: black;
   }
+
   #formId {
     position: absolute;
     top: 10%;
@@ -236,10 +247,12 @@
   #formId li {
     background-color: black;
   }
+
   .card {
     margin-left: 10px;
     margin-right: 10px;
   }
+
   .operacionOpciones {
     margin-bottom: 15px;
     margin-left: 10px;
@@ -248,6 +261,7 @@
     display: inline-block;
     padding: 5px;
   }
+
   .operacionOpcion {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -262,6 +276,7 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
   .operacionOpcion2 {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -276,6 +291,7 @@
     margin-left: 20%;
     text-align: center;
   }
+
   .resultadoTipoInversor {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -285,6 +301,7 @@
     padding-top: 2px;
     display: none;
   }
+
   .resultadoDolarVsDolar {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -300,6 +317,7 @@
     margin-right: 10px;
     display: none;
   }
+
   .operacionOpcion3 {
     border-radius: 5px;
     display: none;
@@ -310,29 +328,29 @@
     margin-left: 20%;
     text-align: center;
   }
+
   .activo {
-    display: -ms-grid;
     display: grid;
     width: 100%;
-    -ms-grid-columns: 33% 33% 33%;
-        grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
     margin-top: 10px;
     padding-bottom: 30px;
   }
+
   #activo {
-    display: -ms-grid;
     display: grid;
     width: 95%;
-    -ms-grid-columns: 33% 33% 33%;
-        grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
     margin-top: 10px;
     padding-bottom: 30px;
     margin-left: 3.5%;
   }
+
   .activos__tarjetas {
     margin-top: 10px;
     padding-bottom: 30px;
   }
+
   .activo__tarjeta {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -344,25 +362,27 @@
     border-color: black;
   }
   .activo__tarjeta:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s;
+    transform: scale(1.05);
+    transition-duration: 0.6s;
     background-color: #548aff;
   }
+
   .tarjeta__nombre {
     text-align: center;
     padding-top: 10px;
   }
+
   img .tarjeta__foto {
     width: 100px;
     height: 100px;
   }
+
   .tarjeta__info {
     text-align: center;
     font-size: 20px;
     padding: 15px;
   }
+
   .activo__dolarBlue {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
@@ -374,26 +394,26 @@
     border-color: black;
   }
   .activo__dolarBlue:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s;
+    transform: scale(1.05);
+    transition-duration: 0.6s;
     background-color: greenyellow;
   }
+
   .nivelRiesgo1 {
     background-color: greenyellow;
     border-radius: 5px;
     margin-top: 0px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
     margin-bottom: 3px;
     border: solid;
     border-width: 3px;
     border-color: black;
-    width: 220px;
+    width: 200px;
     display: inline-block;
     color: #548aff;
   }
+
   .nivelRiesgo2 {
     background-color: greenyellow;
     border-radius: 5px;
@@ -408,6 +428,7 @@
     display: inline-block;
     color: #548aff;
   }
+
   .nivelRiesgo3 {
     background-color: greenyellow;
     border-radius: 5px;
@@ -422,6 +443,29 @@
     display: inline-block;
     color: #548aff;
   }
+
+  .nivelRiesgo4 {
+    background-color: transparent;
+    display: inline-block;
+    margin: 3px;
+    width: 400px;
+  }
+
+  .activo__foto3 {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  #contenedor__clientes {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 10px;
+  }
+  #contenedor__clientes .clientes__subtitulo {
+    color: #548aff;
+    font-weight: bold;
+  }
+
   .contenedor__tabla {
     border-bottom: solid;
     border-color: black;
@@ -435,6 +479,7 @@
     border-color: black;
     border-width: 1px;
   }
+
   #activo__dolarBlue {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -446,20 +491,21 @@
     border-color: black;
   }
   #activo__dolarBlue:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s;
+    transform: scale(1.05);
+    transition-duration: 0.6s;
     background-color: #548aff;
   }
+
   .dolarBlue__nombre {
     text-align: center;
     padding-top: 10px;
   }
+
   img.card-img-top {
     width: 100%;
     height: 400px;
   }
+
   #activo__cedears {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -471,20 +517,21 @@
     border-color: black;
   }
   #activo__cedears:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s;
+    transform: scale(1.05);
+    transition-duration: 0.6s;
     background-color: #548aff;
   }
+
   .cedears__nombre {
     text-align: center;
     padding-top: 10px;
   }
+
   .activo__foto {
     width: 100%;
     height: 270px;
   }
+
   .activo__foto2 {
     width: 100%;
     height: 200px;
@@ -492,6 +539,7 @@
     border-bottom: solid;
     border-color: black;
   }
+
   #activo__bitcoin {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -503,43 +551,49 @@
     border-color: black;
   }
   #activo__bitcoin:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s;
+    transform: scale(1.05);
+    transition-duration: 0.6s;
     background-color: #548aff;
   }
+
   .bitcoin__nombre {
     text-align: center;
     padding-top: 10px;
   }
+
   .bitcoin__foto {
     width: 100%;
   }
+
   .activo__info {
     text-align: center;
     font-size: 20px;
     padding: 15px;
   }
+
   .activo__valor {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 15px;
     margin-top: -10px;
   }
+
   .activo__valor2 {
     font-weight: bold;
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 10px;
   }
+
   .card-group {
     margin-top: 10px;
   }
+
   img.pie__redes {
     width: 30px;
     height: 30px;
   }
+
   .pie {
     /* esta clase corresponde a los pie de pagina*/
     background-color: greenyellow;
@@ -550,10 +604,9 @@
     text-align: center;
     padding-top: 5px;
     padding-bottom: 10px;
-    -webkit-box-ordinal-group: 1001;
-        -ms-flex-order: 1000;
-            order: 1000;
+    order: 1000;
   }
+
   #submitButton {
     margin-left: 40%;
     margin-bottom: 20px;
@@ -568,6 +621,7 @@
     background-color: #74b11a;
     color: #053191;
   }
+
   #submitButtonQuizz {
     margin-left: 20px;
     margin-bottom: 20px;
@@ -581,6 +635,7 @@
     background-color: #74b11a;
     color: #053191;
   }
+
   #submitButtonDolar {
     margin-left: 20px;
     margin-bottom: 20px;
@@ -594,13 +649,16 @@
     background-color: #74b11a;
     color: #053191;
   }
+
   .opciones {
     font-weight: bold;
   }
+
   .contenedor__titulo {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
   }
+
   .contenedor__titulo2 {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -608,10 +666,9 @@
     border-bottom: solid;
     border-color: black;
   }
+
   #titulo1 {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     font-size: 60px;
     padding: 5px;
     font-weight: bold;
@@ -620,6 +677,7 @@
     color: #548aff;
     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   }
+
   .subtitulo {
     font-size: 30px;
     padding: 2px;
@@ -631,9 +689,11 @@
     display: inline-block;
     margin-top: 20px;
   }
+
   .contenedor__botones2 {
     display: none;
   }
+
   .contenedor {
     font-size: 28px;
     border-radius: 5px;
@@ -655,6 +715,7 @@
   .contenedor a {
     text-decoration: none;
   }
+
   #btn1 {
     font-size: 28px;
     border-radius: 5px;
@@ -678,12 +739,14 @@
     text-decoration: none;
     color: #548aff;
   }
+
   .contenedor__botones {
     padding-left: 5px;
     padding-right: 5px;
     border-bottom: solid;
     border-color: black;
   }
+
   #recargarFormulario {
     font-size: 15px;
     border-radius: 5px;
@@ -699,9 +762,9 @@
     line-height: 20px;
   }
   #recargarFormulario:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
+
   .formClass {
     background-color: white;
     border-radius: 5px;
@@ -715,25 +778,30 @@
     top: 20%;
     z-index: 10;
   }
+
   #cerrar {
     position: absolute;
     right: 5px;
     top: 5px;
   }
+
   #cerrarFormulario {
     position: absolute;
     right: 5px;
     top: 5px;
   }
+
   #cerrarFormularioDolar {
     position: absolute;
     right: 5px;
     top: 5px;
   }
+
   .foto__cerrar {
     width: 30px;
     height: 30px;
   }
+
   label {
     font-size: 20px;
     padding: 2px;
@@ -743,12 +811,14 @@
     margin-bottom: 20px;
     margin-right: 10px;
   }
+
   input {
     font-size: 15px;
     margin-bottom: 20px;
     margin-right: 5px;
     border-radius: 5px;
   }
+
   .liQuizz {
     background-color: rgba(255, 255, 255, 0.6);
     margin-bottom: 5px;
@@ -756,9 +826,9 @@
     border-radius: 5px;
   }
   .liQuizz:focus {
-    -webkit-transform: scale(none);
-            transform: scale(none);
+    transform: scale(none);
   }
+
   fieldset {
     margin-top: 10px;
     margin-bottom: 0px;
@@ -769,30 +839,35 @@
     padding-top: 20px;
     background-color: rgba(84, 138, 255, 0.7);
   }
+
   .motivo {
     padding-top: 20px;
   }
+
   select {
     font-size: 12px;
     border-radius: 5px;
   }
+
   textarea {
     border-radius: 5px;
   }
   textarea:focus {
     font-size: 16px;
     border-radius: 5px;
-    -webkit-transform: translate(20px, 0px);
-            transform: translate(20px, 0px);
+    transform: translate(20px, 0px);
     min-width: 510px;
     min-height: 200px;
   }
+
   .consulta {
     vertical-align: super;
   }
+
   .consulta2 {
     margin-top: 20px;
   }
+
   .botones {
     font-family: sans-serif;
     color: black;
@@ -808,26 +883,25 @@
     background-color: #548aff;
     color: black;
   }
+
   .formulario {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     line-height: 10px;
     text-align: left;
   }
+
   .formularioNovedades {
     margin: 10px;
     font-size: 20px;
     padding: 10px;
   }
+
   div.checkbox {
     margin-left: 0px;
     font-size: 20px;
   }
+
   .checkbox {
     display: inline;
     font-size: 15px;
@@ -837,45 +911,50 @@
     margin-left: -20px;
     padding: 2px;
   }
+
   .input-group {
     display: block;
   }
+
   select {
     font-size: 20px;
   }
+
   .carousel__titulo {
     font-size: 20px;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.8);
   }
+
   #pagina1 {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: [x0] 1fr [x1] 2fr [x2];
-        grid-template-columns: [x0] 1fr [x1] 2fr [x2];
-    -ms-grid-rows: [y0] 1fr;
-        grid-template-rows: [y0] 1fr;
+    grid-template-columns: [x0] 1fr [x1] 2fr [x2];
+    grid-template-rows: [y0] 1fr;
   }
+
   .sidebar {
-    grid-column: x0 / x1;
-    grid-row: y0 / y1;
+    grid-column: x0/x1;
+    grid-row: y0/y1;
     background-color: rgba(84, 138, 255, 0.7);
     padding: 3px;
     border-right: solid;
     border-color: black;
     display: none;
   }
+
   #mostarCuantoTardo {
-    grid-column: x0 / x1;
-    grid-row: y0 / y1;
+    grid-column: x0/x1;
+    grid-row: y0/y1;
     border-left: solid;
     border-color: black;
     display: none;
   }
+
   .activo #card {
-    grid-column: x1 / x2;
+    grid-column: x1/x2;
     margin-left: 5px;
   }
+
   #mostarTipoInversor {
     background-color: rgba(36, 33, 33, 0.7);
     border-left: solid;
@@ -883,28 +962,24 @@
     display: none;
     padding: 0px;
     font-size: 30px;
-    grid-column: x1 / x2;
-    grid-row: y0 / y1;
+    grid-column: x1/x2;
+    grid-row: y0/y1;
     padding-bottom: 20px;
   }
+
   #cuentoTardo {
-    grid-column: x0 / x1;
-    grid-row: y0 / y1;
+    grid-column: x0/x1;
+    grid-row: y0/y1;
   }
+
   /*Boton de ir arriba*/
   #button-up {
     width: 60px;
     height: 60px;
     background: rgba(110, 236, 8, 0.4);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     color: white;
     border-radius: 50%;
     font-size: 20px;
@@ -913,16 +988,12 @@
     right: 11px;
     cursor: pointer;
     border: 4px solid transparent;
-    -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   #button-up:hover {
     background: rgba(110, 236, 8, 0.4);
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
     border-color: rgba(0, 0, 0, 0.1);
   }
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */

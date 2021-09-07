@@ -3,21 +3,21 @@
         {
             "id": 1,
             "name": "Harry Potter",
-            "image": "../img/bitcoin.jpg",
+            "image": "../img/harry.jpg",
             "house": "Gryffindor",
-            "opinion": "Un antes y un después. Ahora presto atención a mis finanzas" 
+            "opinion": "Genial! Ahora presto atención a mis finanzas" 
           },
           {
               "id": 2,
               "name": "Hermione Granger",
-              "image": "../img/bitcoin.jpg",
+              "image": "../img/hermione.jpg",
               "house": "Gryffindor",
               "opinion": "Aprendí a invertir con esta página" 
           },
           {
               "id": 3,
               "name": "Ron Weasley",
-              "image": "../img/bitcoin.jpg",
+              "image": "../img/ron.jpg",
               "house": "Gryffindor",
               "opinion": "Me encanta la app"         
           }

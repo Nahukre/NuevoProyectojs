@@ -35,10 +35,11 @@ $("#contenedor__clientes").show(function () {
                 let misDatos = respuesta.users;
                 for (const personajes of misDatos) {
                     console.log(personajes)
-                    $("#nuestrosClientes").prepend(`<div class= "nivelRiesgo1">
+                    $("#nuestrosClientes").prepend(`<div class= "nivelRiesgo4">
                                     <h2 class="activo__valor2">${personajes.name}</h2>
-                                    <img class="activo__foto2" src="${personajes.image}" alt="foto de ${personajes.image}" width= "100px" height= "100px">
+                                    <img class="activo__foto3" src="${personajes.image}" alt="foto de ${personajes.image}" width= "100px" height= "100px">
                                     <p class="activo__valor2">House: ${personajes.house}</p>
+                                    <p class="activo__valor3">"${personajes.opinion}"</p>
                                     </div>`);
                 }
             }
@@ -564,24 +565,33 @@ function DolarVsDolar(g) {
 
     let pesosADolar = parseInt(document.getElementById('pesosADolar').value);
     let dolaresQueCompra = division(pesosADolar, 165);
+    if  (dolaresQueCompra > 200)
+         dolaresQueCompra = 200;
+    
     let restoDolarOficial = pesosADolar - (multiplicacion(165, 200));
     let blue = division(restoDolarOficial, 183);
     let dolaresTotal = suma(dolaresQueCompra, blue);
     let dolarBolsa = division(pesosADolar, 170);
-    if (dolaresQueCompra <= 200) {
+    console.log(dolaresQueCompra);
+    console.log(dolaresTotal);
+    
+
+    if  (dolaresTotal <= 200) {
         $(".resultadoDolarVsDolar").append(`<div>Compre dolar oficial</div>`);
         console.log("si")
-    } else {
+    }     else {
         if (dolaresTotal > dolarBolsa) {
             $(".resultadoDolarVsDolar").append(`<div>Compre dolar oficial y el resto blue</div>`)
             console.log("no/si")
         } else if (dolaresTotal < dolarBolsa) {
             $(".resultadoDolarVsDolar").append(`<div>Compre dolar bolsa</div>`)
             console.log("no")
-        } else console.log("Es lo mismo")
+        } else console.log("Compre dolar bolsa")
     }
+    $("#formIdDolar").css("display", "none");
+    $(".sidebar").css("display", "block");
     $(".resultadoTipoInversor").css("display", "block");
-    $("#resultadoDolarVsDolar").css("display", "block");
+    $(".resultadoDolarVsDolar").css("display", "block");
     $("#mostarTipoInversor").css("display", "inline-block");
     $("#myFormDolar")[0].reset();
 }

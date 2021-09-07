@@ -373,13 +373,13 @@ $color-celeste: #548aff;
         background-color: $color-verde;
         border-radius: 5px;
         margin-top: 0px;
-        margin-left: 3px;
-        margin-right: 3px;
+        margin-left: 1px;
+        margin-right: 1px;
         margin-bottom: 3px;
         border: solid;
         border-width: 3px;
         border-color: black;
-        width: 220px;
+        width: 200px;
         display: inline-block;
         color: $color-celeste;
     }
@@ -410,6 +410,27 @@ $color-celeste: #548aff;
         width: 220px;
         display: inline-block;
         color: $color-celeste;
+    }
+    .nivelRiesgo4 {
+        background-color:transparent;
+        display: inline-block;
+        margin: 3px;
+        width: 400px;
+    }
+    .activo__foto3 {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+    #contenedor__clientes {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 10px;
+        .clientes__subtitulo {
+            color: $color-celeste;
+            font-weight: bold;
+            // text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+            
+        }
     }
     .contenedor__tabla {
         border-bottom: solid;
@@ -888,14 +909,5 @@ $color-celeste: #548aff;
             border-color: rgba(0, 0, 0, 0.1);
         }
     }
-    // #carouselExampleCaptions {
-    //     grid-column: x1 / x2;
-    //     margin-top: 30px;
-    // }
-    // #titulo1 {
-    //     width: 20%;
-    //     margin: auto;
-    //     margin-top: 30px;
-    //     grid-column: x1 / x2;
-    // }
+    
 }
