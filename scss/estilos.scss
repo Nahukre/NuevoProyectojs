@@ -145,6 +145,27 @@ $color-celeste: #548aff;
         padding-bottom: 10px;
         text-align: center;
     }
+    .contenedorDolar {
+        background-color: #212529;
+        border-bottom: solid;
+        border-color: black;
+    }
+    .card__dolares {
+        display: inline-block;
+        color: white;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+    .dolarPrecio {
+        margin-top: -1px;
+        margin-bottom: 0px;
+    }
+    .dolarNombre {
+        border-bottom: solid;
+        border-color: white;
+        padding-bottom: 5px;
+        padding-top: 2px;
+    }
     table {
         font-family: sans-serif;
         font-weight: bold;
@@ -243,6 +264,9 @@ $color-celeste: #548aff;
         text-align: center;
         display: inline-block;
         padding: 5px;
+        h3 {
+            text-transform: uppercase;
+        }
     }
     .operacionOpcion {
         background-color: rgba(255, 255, 255, 0.6);
@@ -412,7 +436,7 @@ $color-celeste: #548aff;
         color: $color-celeste;
     }
     .nivelRiesgo4 {
-        background-color:transparent;
+        background-color: transparent;
         display: inline-block;
         margin: 3px;
         width: 400px;
@@ -429,7 +453,6 @@ $color-celeste: #548aff;
             color: $color-celeste;
             font-weight: bold;
             // text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-            
         }
     }
     .contenedor__tabla {
@@ -909,5 +932,4 @@ $color-celeste: #548aff;
             border-color: rgba(0, 0, 0, 0.1);
         }
     }
-    
 }

@@ -1,35 +1,13 @@
-const URLGET = "http://hp-api.herokuapp.com/api/characters";
+//clientes
 
-
-
-//    .click(() => {
-//         $.get(URLGET, function(respuesta, estado) {
-//             if (estado === "success") {
-//                 let misDatos = respuesta;
-//                 for (const personajes of misDatos) {
-//                     $(".contenedor__botones2").prepend(`<div class= "nivelRiesgo1">
-//                     <h2 class="activo__valor2">${personajes.name}</h2>
-//                     <img class="activo__foto2" src="${personajes.image}" alt="foto de ${personajes.image}" width= "100px" height= "100px">
-//                     <p class="activo__valor2">House: ${personajes.house}</p>
-//                     </div>`);
-//                 }
-//             }
-//         });
-//     });
-//     $(document).ready(function() {
-//         $("#btn1").click(function(event) {
-//             $(".contenedor__botones2").empty();
-//         });
-//     });
-
-$("#contenedor__clientes").show(function () {
+$("#contenedor__clientes").show(function() {
 
     $.ajax({
             url: "../json/usuarios.json",
             type: "GET",
             dataType: "json"
         })
-        .done(function (respuesta, estado) {
+        .done(function(respuesta, estado) {
 
             if (estado === "success") {
                 let misDatos = respuesta.users;
@@ -38,90 +16,44 @@ $("#contenedor__clientes").show(function () {
                     $("#nuestrosClientes").prepend(`<div class= "nivelRiesgo4">
                                     <h2 class="activo__valor2">${personajes.name}</h2>
                                     <img class="activo__foto3" src="${personajes.image}" alt="foto de ${personajes.image}" width= "100px" height= "100px">
-                                    <p class="activo__valor2">House: ${personajes.house}</p>
+                                    <p class="activo__valor2">${personajes.house}</p>
                                     <p class="activo__valor3">"${personajes.opinion}"</p>
                                     </div>`);
                 }
             }
         })
-        .fail(function (xhr, status, error) {
-            console.log("error")
-        })
-})
-/*
-btnSelected.click(function () {
-
-    $.ajax({
-            url: "../json/usuarios.json",
-            type: "GET",
-            dataType: "json"
-        })
-        .done(function (respuesta, estado) {
-
-            console.log("Respuesta" + respuesta.users)
-
-            // for(let i = 0; i<request.users.length;i++){
-            //     alert(`${request.users[i].name} opino ${request.users[i].opinion}`)
-            //     }
-
-            for (const personajes of respuesta.users) {
-
-                console.log(personajes)
-                
-                $(".contenedor__botones2").prepend(`<div class= "nivelRiesgo1">
-                        <h2 class="activo__valor2">${personajes.name}</h2>
-                        
-                        <p class="activo__valor2">House: ${personajes.email}</p>
-                        </div>`);
-            }
-            // if (estado === "success") {
-            //     let misDatos = respuesta;
-            //     for (const personajes of misDatos) {
-            //         $(".contenedor__botones2").prepend(`<div class= "nivelRiesgo1">
-            //         <h2 class="activo__valor2">${personajes.name}</h2>
-
-            //         <p class="activo__valor2">House: ${personajes.email}</p>
-            //         </div>`);
-            //     }
-            // }
-        })
-        .fail(function (xhr, status, error) {
+        .fail(function(xhr, status, error) {
             console.log("error")
         })
 })
 
-*/
-/*
-function Clientes() {
-    const URLGET = "http://hp-api.herokuapp.com/api/characters/house/gryffindor";
-
-    $.get(URLGET, function(respuesta, estado) {
-        if (estado === "success") {
-            let misDatos = respuesta;
-            for (const personajes of misDatos) {
-            $("nuestrosClientes").prepend(`<div class= "clientesCard">
-            <h2 class="personaje__${personajes.name}">${personajes.name}</h2>
-            <img class="personaje__foto" src="${personajes.image}" alt="foto de ${personajes.image}" width= "100px" height= "100px">
-            <p class="personaje__house">House: ${personajes.house}</p>
-            </div>`);
-            }
-        }
-    });
-}
-Clientes();
-*/
+//api dolar
 const URL_DOLAR = "https://criptoya.com/api/dolar"
 
 
+// $(() => {
+//     $.get(URL_DOLAR, function(res, state) {
+//         if (state === "success") {
+//             for (const dolar in res) {
+//                 $(".tablaDolar").append(`
+//                 <tr scope="row" id="${dolar}">
+//                 <th>${dolar}</th>
+//                 <td>$${res[dolar]}</td>
+//                 </tr>`);
+//             }
+//         }
+//         $("#time").css("display", "none");
+//         $("#ccb").css("display", "none");
+//     });
+// });
+
 $(() => {
-    $.get(URL_DOLAR, function (res, state) {
+    $.get(URL_DOLAR, function(res, state) {
         if (state === "success") {
             for (const dolar in res) {
-                $(".tablaDolar").append(`
-                <tr scope="row" id="${dolar}">
-                <th>${dolar}</th>
-                <td>$${res[dolar]}</td>
-                </tr>`);
+                $(".contenedorDolar").append(`<div class="card__dolares" id="${dolar}">
+                <h3 class="dolarNombre" id="card__${dolar}">Dolar ${dolar}</h3>
+                <h3 class="dolarPrecio" id="card__${dolar}">$${res[dolar]}</h3></div>`);
             }
         }
         $("#time").css("display", "none");
@@ -129,7 +61,7 @@ $(() => {
     });
 });
 
-
+//objeto usuario
 let miFormulario = document.getElementById("myForm");
 
 class persona {
@@ -155,7 +87,7 @@ miFormulario.addEventListener("submit", crearUsuario);
 const multiplicacion = (a, b) => a * b;
 const division = (a, b) => a / b;
 const suma = (a, b) => a + b;
-
+//formulario cuanto tardo
 function crearUsuario(e) {
 
     e.preventDefault();
@@ -187,10 +119,16 @@ function crearUsuario(e) {
     let sueldoAños = division(mesesDeAhorro, 12);
     let ahorroAños = division(ahorroReal, 12);
     let tiempoTotal = division(valorBienIngresado, (suma(extraIngresado, ahorroAnual)));
-    // let tiempoPlus = division(valorBienIngresado, multiplicacion(ahorroAnual, 1.1));
 
-    $(document).ready(function () {
-        $("#submitButton").click(function (event) {
+    let dolarBlueAhorro = division(document.getElementById('ahorro').value, dolarBlue.valor);
+    let bitcoinAhorro = division(document.getElementById('ahorro').value, bitcoin.valor);
+    let appleAhorro = division(document.getElementById('ahorro').value, cedearApple.valor);
+    let amazonAhorro = division(document.getElementById('ahorro').value, cedearAmazon.valor);
+    let teslaAhorro = division(document.getElementById('ahorro').value, cedearTesla.valor);
+    let oroAhorro = division(document.getElementById('ahorro').value, oro.valor);
+
+    $(document).ready(function() {
+        $("#submitButton").click(function(event) {
             $("#cuantoTardo").empty();
             $("#card").empty();
         });
@@ -329,15 +267,6 @@ function crearUsuario(e) {
             break;
     }
 
-    let dolarBlueAhorro = division(document.getElementById('ahorro').value, dolarBlue.valor);
-    let bitcoinAhorro = division(document.getElementById('ahorro').value, bitcoin.valor);
-    let appleAhorro = division(document.getElementById('ahorro').value, cedearApple.valor);
-    let amazonAhorro = division(document.getElementById('ahorro').value, cedearAmazon.valor);
-    let teslaAhorro = division(document.getElementById('ahorro').value, cedearTesla.valor);
-    let oroAhorro = division(document.getElementById('ahorro').value, oro.valor);
-
-    // let mostrarCardActivos = document.getElementById("cardActivos");
-
     $("#mostrarTipoInversor").prepend(`<h6 class="operacionOpcion2">Listado de posibles inversiones</h6>`);
     for (const inversiones of nacional.activo) {
         $("#card").append(`<div class= "activo__dolarBlue">
@@ -359,7 +288,7 @@ console.log(localStorage.getItem(1));
 
 
 
-// array
+// array inversiones
 class Inversion {
     constructor(denominacion, nivelRiesgo, valor, descripcion, foto) {
         this.denominacion = denominacion;
@@ -408,7 +337,7 @@ const ordenarActivos = () => {
 ordenarActivos();
 
 
-//quizz
+//quizz tipo de inversor
 let miFormulario2 = document.getElementById("formulario2")
 
 let buttonSubmitQuizz = document.getElementById('submitButtonQuizz');
@@ -418,13 +347,6 @@ function definirInversor(evnt) {
     evnt.preventDefault();
     let formulario = evnt.target;
 
-    //Preguntas que ya no se usan prompt
-    // let cuantoInvierte = parseInt(prompt("Qué porcentaje de sus ahorros invertiría? \n1- Hasta un 10% \n2- Hasta un 20% \n3- Más de un 20 %"));
-    // let queHaría = parseInt(prompt("Si un activo que posee se reduce en su valor drasticamente, usted: \n1- Vende el activo \n2- Espera a que suba su precio nuevamente \n3- Compra más aprovechando su menor valor"));
-    // let porcentajePerdida = parseInt(prompt("Qué porcentaje de su inversión estaría dispúesto a perder con tal de obtener ganancias? \n1- No está dispuesto a arriesgar sus ahorros \n2- Está dispuesto a arriezgar algo de sus ahorros \n3- Arriezgaría un porcentaje considerable de sus ahorros con miras a obtener ganancias futuras"));
-    // let activoConPotencial = parseInt(prompt("Si surge un nuevo activo, con gran potencial de crecimiento, pero con gran riezgo, usted: \n1- No invertiría en ese activo \n2- Invertiría una parte pequeña de su capital en ese activo \n3- Si confía en el activo invertiría sin dudarlo"));
-    // let tipoDeInversor = cuantoInvierte + queHaría + porcentajePerdida + activoConPotencial
-
     let porcentajeDeAhorro = parseInt(document.querySelector('input[name="porcentajeDeAhorro"]:checked').value);
     let reduccionDeActivo = parseInt(document.querySelector('input[name="reduccionDeActivo"]:checked').value);
     let gananciaEsperada = parseInt(document.querySelector('input[name="gananciaEsperada"]:checked').value);
@@ -432,15 +354,14 @@ function definirInversor(evnt) {
     let SumaQuizz = porcentajeDeAhorro + reduccionDeActivo + gananciaEsperada + nuevoActivo;
     console.log(SumaQuizz);
 
-    $(document).ready(function () {
-        $("#submitButtonQuizz").click(function (event) {
+    $(document).ready(function() {
+        $("#submitButtonQuizz").click(function(event) {
             $("#tipoInversor").empty();
             $(".resultadoTipoInversor2").empty();
         });
     });
 
     let tipoInversor = document.getElementById("tipoInversor");
-
 
     switch (true) {
         case (SumaQuizz <= 4 || SumaQuizz <= 6):
@@ -463,7 +384,6 @@ function definirInversor(evnt) {
             $(".nivelRiesgo2").css("display", "none");
             $(".nivelRiesgo3").css("display", "none");
             break;
-
         case (SumaQuizz <= 7 || SumaQuizz <= 9):
             let inversorModeradoJson = {
                 "tipoDeInversor": "moderado"
@@ -484,7 +404,6 @@ function definirInversor(evnt) {
             $(".nivelRiesgo1").css("display", "none");
             $(".nivelRiesgo3").css("display", "none");
             break;
-
         case (SumaQuizz >= 10 || SumaQuizz <= 12):
             let inversorAgresivoJson = {
                 "tipoDeInversor": "agresivo"
@@ -523,7 +442,8 @@ function definirInversor(evnt) {
     $("#mostarTipoInversor").css("display", "inline-block");
     $("#formulario2")[0].reset();
 }
-//definirInversor(e);
+
+//funciones abrir y cerrar formularios
 
 function abrir() {
     document.getElementById("formId").style.display = "block";
@@ -555,37 +475,35 @@ let miFormulario3 = document.getElementById("myFormDolar");
 let buttonSubmitDolar = document.getElementById('submitButtonDolar');
 miFormulario3.addEventListener("submit", DolarVsDolar);
 
-// $("#cerrarFormularioDolar").click(function() {
-//     $("formIdDolar").slideUp(1000, "fast");
-// });
-
 function DolarVsDolar(g) {
     g.preventDefault();
     let formulario = g.target;
 
     let pesosADolar = parseInt(document.getElementById('pesosADolar').value);
     let dolaresQueCompra = division(pesosADolar, 165);
-    if  (dolaresQueCompra > 200)
-         dolaresQueCompra = 200;
-    
+    if (dolaresQueCompra > 200)
+        dolaresQueCompra = 200;
     let restoDolarOficial = pesosADolar - (multiplicacion(165, 200));
     let blue = division(restoDolarOficial, 183);
     let dolaresTotal = suma(dolaresQueCompra, blue);
     let dolarBolsa = division(pesosADolar, 170);
     console.log(dolaresQueCompra);
     console.log(dolaresTotal);
-    
+    console.log(restoDolarOficial);
 
-    if  (dolaresTotal <= 200) {
+    $(document).ready(function() {
+        $("#submitButtonDolar").click(function(event) {
+            $(".resultadoDolarVsDolar").empty();
+        });
+    });
+
+    if (dolaresTotal <= 200) {
         $(".resultadoDolarVsDolar").append(`<div>Compre dolar oficial</div>`);
-        console.log("si")
-    }     else {
+    } else {
         if (dolaresTotal > dolarBolsa) {
-            $(".resultadoDolarVsDolar").append(`<div>Compre dolar oficial y el resto blue</div>`)
-            console.log("no/si")
+            $(".resultadoDolarVsDolar").append(`<div>Compre dolar oficial y el resto dolar blue</div>`)
         } else if (dolaresTotal < dolarBolsa) {
             $(".resultadoDolarVsDolar").append(`<div>Compre dolar bolsa</div>`)
-            console.log("no")
         } else console.log("Compre dolar bolsa")
     }
     $("#formIdDolar").css("display", "none");
@@ -595,4 +513,3 @@ function DolarVsDolar(g) {
     $("#mostarTipoInversor").css("display", "inline-block");
     $("#myFormDolar")[0].reset();
 }
-//DolarVsDolar();
