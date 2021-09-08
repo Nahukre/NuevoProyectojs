@@ -277,9 +277,8 @@ function crearUsuario(e) {
         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${division(ahorroIngresado, inversiones.valor).toFixed(2)} ${inversiones.denominacion}.</h5></div>`);
     }
     $(".operacionOpcion2").css("display", "block");
-    document.getElementById("formIdBis").style.display = "none";
-    // $("#mostrarCuantoTardo").css("display", "block");
-    $(".sidebar").css("display", "block");
+    $("#formIdBis").hide(1000);
+    $(".sidebar").fadeIn(1000);
     $("#mostarTipoInversor").css("display", "inline-block");
     $("#myForm")[0].reset();
 };
@@ -313,7 +312,7 @@ let bitcoin = new Inversion("Bitcoin", 3, 8300000, "Bitcoin es una criptomoneda 
 let cedearTesla = new Inversion("Tesla cedear", 3, 7500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Tesla. Activo financiero atado al dolar y a la valuación de la empresa en el mercado. Este activo es considerado de riesgo.", "../img/tesla.png");
 let cedearApple = new Inversion("Apple cedear", 2, 3500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Apple. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.", "../img/apple.jpg");
 let cedearAmazon = new Inversion("Amazon cedear", 2, 4500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Amazon. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.", "../img/amazon.jpg");
-let oro = new Inversion("Oro", 1, 5570000, "El oro es un metal precioso utilizado como reserva de valor. Se caracteriza por tener poca variación en su cotización y ser resguardo de valor en epocas de inflación. El interés por las materias primas parece que está en auge y hay buenos catalizadores que pueden mantener esta dinámica creciente.", "../img/oro.jpg");
+let oro = new Inversion("Oro", 1, 55700, "El oro es un metal precioso utilizado como reserva de valor. Se caracteriza por tener poca variación en su cotización y ser resguardo de valor en epocas de inflación. El interés por las materias primas parece que está en auge y hay buenos catalizadores que pueden mantener esta dinámica creciente. Su venta es por gramo.", "../img/oro.jpg");
 
 nacional.agregarInversion(dolarBlue);
 nacional.agregarInversion(bitcoin);
@@ -377,7 +376,7 @@ function definirInversor(evnt) {
             for (const inversiones of nacional.activo) {
                 $(".resultadoTipoInversor2").prepend(`<div class= "nivelRiesgo${inversiones.nivelRiesgo}">
                     <h2 class="dolarBlue__nombre">${inversiones.denominacion}</h2>
-                    <img class="activo__foto2" src="${inversiones.foto}" alt="foto de ${inversiones.denominacion}" width= "100px" height= "100px">
+                    <img class="activo__foto2" src="${inversiones.foto}" alt="foto de ${inversiones.denominacion}" width= "100px" height= "90px">
                     <p class="activo__valor2">Valor: $${inversiones.valor}</p>
                     </div>`);
             }
@@ -397,7 +396,7 @@ function definirInversor(evnt) {
             for (const inversiones of nacional.activo) {
                 $(".resultadoTipoInversor2").prepend(`<div class= "nivelRiesgo${inversiones.nivelRiesgo}">
                 <h2 class="dolarBlue__nombre">${inversiones.denominacion}</h2>
-                <img class="activo__foto" src="${inversiones.foto}" alt="foto de ${inversiones.denominacion}" width= "100px" height= "100px">
+                <img class="activo__foto" src="${inversiones.foto}" alt="foto de ${inversiones.denominacion}" width= "100px" height= "90px">
                 <p class="activo__valor2">Valor: $${inversiones.valor}</p>
                 </div>`);
             }
@@ -417,7 +416,7 @@ function definirInversor(evnt) {
             for (const inversiones of nacional.activo) {
                 $(".resultadoTipoInversor2").prepend(`<div class= "nivelRiesgo${inversiones.nivelRiesgo}">
                 <h2 class="dolarBlue__nombre">${inversiones.denominacion}</h2>
-                <img class="activo__foto2" src="${inversiones.foto}" alt="foto de ${inversiones.denominacion}" width= "100px" height= "100px">
+                <img class="activo__foto2" src="${inversiones.foto}" alt="foto de ${inversiones.denominacion}" width= "100px" height= "90px">
                 <p class="activo__valor2">Valor: $${inversiones.valor}</p>
                 </div>`);
             }
@@ -429,10 +428,10 @@ function definirInversor(evnt) {
 
     //funcion efectos
     function removeElementWithAnimation() {
-        $("#formId").hide(3000);
-        $(".sidebar").fadeIn(3000);
-        $(".resultadoTipoInversor").fadeIn(3000).fadeOut(6000).fadeIn(1000);
-        $(".operacionOpcion").delay(10000).fadeOut("slow");
+        $("#formId").hide(1000);
+        $(".sidebar").fadeIn(1000);
+        $(".resultadoTipoInversor").fadeIn(1000);
+        // $(".operacionOpcion").delay(10000).fadeOut("slow");
     }
     removeElementWithAnimation();
 
@@ -506,10 +505,10 @@ function DolarVsDolar(g) {
             $(".resultadoDolarVsDolar").append(`<div>Compre dolar bolsa</div>`)
         } else console.log("Compre dolar bolsa")
     }
-    $("#formIdDolar").css("display", "none");
-    $(".sidebar").css("display", "block");
-    $(".resultadoTipoInversor").css("display", "block");
-    $(".resultadoDolarVsDolar").css("display", "block");
+    $("#formIdDolar").hide(1000);
+    $(".sidebar").fadeIn(1000);
+    // $(".resultadoTipoInversor").css("display", "block");
+    $(".resultadoDolarVsDolar").fadeIn(1000);
     $("#mostarTipoInversor").css("display", "inline-block");
     $("#myFormDolar")[0].reset();
 }

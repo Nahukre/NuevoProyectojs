@@ -305,8 +305,9 @@
     border-radius: 5px;
     border: solid;
     border-color: black;
-    margin: 2px;
+    margin: 6px;
     padding-top: 2px;
+    padding-bottom: 2px;
     display: none;
   }
   .resultadoDolarVsDolar {
@@ -460,6 +461,8 @@
   #contenedor__clientes {
     background-color: rgba(255, 255, 255, 0.7);
     padding-top: 10px;
+    border-top: solid;
+    border-color: black;
   }
   #contenedor__clientes .clientes__subtitulo {
     color: #548aff;
@@ -574,7 +577,7 @@
     font-weight: bold;
     font-size: 20px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .card-group {
     margin-top: 10px;

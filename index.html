@@ -122,8 +122,8 @@
                 <h6 class="operacionOpcion3">Debería invertir en los siguientes activos</h6>
                 <div class="resultadoTipoInversor2">
                 </div>
-                <div class="resultadoDolarVsDolar"></div>
             </div>
+            <div class="resultadoDolarVsDolar"></div>
         </div>
         <div class="formClass" id="formIdDolar">
             <form id="myFormDolar">
@@ -133,7 +133,7 @@
                 <h2 class="subtitulo">Dolar vs. Dolar</h2>
                 <div class="input-group">
                     <label>¿Cuantos pesos desea destinar a comprar dólares?</label>
-                    <input type="number" id="pesosADolar" />
+                    <input type="number" id="pesosADolar" required/>
                 </div>
                 <div class="input-group">
                     <input type="hidden" value="14">
@@ -191,12 +191,12 @@
             <form id="formulario2">
                 <h2 class="subtitulo">¿Qué tipo de inversor soy?</h2>
                 <div class="input-group">
-                    <label>Qué porcentaje de sus ahorros invertiría en diferentes activos?</label>
+                    <label>¿Qué porcentaje de sus ahorros invertiría en diferentes activos?</label>
                     <ul>
-                        <li class="liQuizz"><input type="radio" name="porcentajeDeAhorro" value="1" checked />Hasta un 10
+                        <li class="liQuizz"><input type="radio" name="porcentajeDeAhorro" value="1" checked />Hasta un 10%
                         </li>
                         <li class="liQuizz"><input type="radio" name="porcentajeDeAhorro" value="2" />Hasta un 20%</li>
-                        <li class="liQuizz"><input type="radio" name="porcentajeDeAhorro" value="3" />Más de un 20 %
+                        <li class="liQuizz"><input type="radio" name="porcentajeDeAhorro" value="3" />Más de un 20%
                         </li>
                     </ul>
                 </div>
@@ -210,12 +210,12 @@
                     </ul>
                 </div>
                 <div class="input-group">
-                    <label>Qué porcentaje de su inversión estaría dispúesto a perder con tal de obtener
+                    <label>¿Qué porcentaje de su inversión estaría dispúesto a perder con tal de obtener
                         ganancias?</label>
                     <ul>
                         <li class="liQuizz"><input type="radio" name="gananciaEsperada" value="1" checked />No está dispuesto a arriesgar sus ahorros</li>
                         <li class="liQuizz"><input type="radio" name="gananciaEsperada" value="2" />Está dispuesto a arriezgar algo de sus ahorros</li>
-                        <li class="liQuizz"><input type="radio" name="gananciaEsperada" value="3" />Arriezgaría un porcentaje considerable de mis ahorros con miras a obtener ganancias futuras</li>
+                        <li class="liQuizz"><input type="radio" name="gananciaEsperada" value="3" />Arriezgaría un porcentaje considerable de sus ahorros con miras a obtener ganancias futuras</li>
                     </ul>
                 </div>
                 <div class="input-group">
